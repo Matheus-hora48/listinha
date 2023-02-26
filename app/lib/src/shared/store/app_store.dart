@@ -1,24 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:rx_notifier/rx_notifier.dart';
 
 class AppStore {
-  final themeMode = ValueNotifier(ThemeMode.system);
-  final syncDate = ValueNotifier<DateTime?>(null);
-
-  AppStore();
-  
-  void save() {}
-
-  void init() {}
-
-  void changeThemeMode(ThemeMode? mode) {
-    if (mode != null) {
-      themeMode.value = mode;
-      save();
-    }
-  }
-
-  void setSyncDate(DateTime date) {
-    syncDate.value = date;
-    save();
-  }
+  final themeMode = RxNotifier(ThemeMode.system);
+  final syncDate = RxNotifier<DateTime?>(null);
 }
