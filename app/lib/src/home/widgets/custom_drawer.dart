@@ -1,7 +1,7 @@
-import 'package:cadrninho/src/shared/store/app_store.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:intl/intl.dart';
+import 'package:listinha/src/shared/stores/app_store.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -30,12 +30,7 @@ class CustomDrawer extends StatelessWidget {
       },
       children: [
         Padding(
-          padding: const EdgeInsets.only(
-            top: 28,
-            right: 16,
-            left: 16,
-            bottom: 16,
-          ),
+          padding: const EdgeInsets.fromLTRB(16, 28, 16, 16),
           child: Text(
             'Opções',
             style: Theme.of(context).textTheme.titleSmall,
@@ -47,9 +42,7 @@ class CustomDrawer extends StatelessWidget {
             width: 210,
             child: Row(
               children: [
-                const Text(
-                  'Sincronizar',
-                ),
+                const Text('Sincronizar'),
                 const Spacer(),
                 Text(
                   syncDateText,

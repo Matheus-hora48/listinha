@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class EditTaskBoardPage extends StatefulWidget {
   const EditTaskBoardPage({super.key});
@@ -14,7 +12,7 @@ class _EditTaskBoardPageState extends State<EditTaskBoardPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sigma Notes'),
+        title: const Text('LISTINHA'),
       ),
     );
   }

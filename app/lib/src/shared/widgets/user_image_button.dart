@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
-class UserImageButtom extends StatelessWidget {
-  const UserImageButtom({Key? key}) : super(key: key);
+class UserImageButton extends StatelessWidget {
+  const UserImageButton({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,9 +9,9 @@ class UserImageButtom extends StatelessWidget {
     final colorScheme = theme.colorScheme;
     return GestureDetector(
       child: CircleAvatar(
-        child: Text('M'),
-        foregroundColor: colorScheme.onPrimary,
         backgroundColor: colorScheme.primary,
+        foregroundColor: colorScheme.onPrimary,
+        child: const Text('A'),
       ),
     );
   }

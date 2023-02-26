@@ -1,5 +1,6 @@
-import 'package:cadrninho/src/shared/services/realm/models/task_model.dart';
 import 'package:flutter/material.dart';
+
+import '../../shared/services/realm/models/task_model.dart';
 
 enum TaskCardStatus {
   pending(Icons.access_time, 'Pendente'),
@@ -20,12 +21,12 @@ class TaskCard extends StatelessWidget {
 
   double getProgress(List<Task> tasks) {
     if (tasks.isEmpty) return 0;
-    final completes = tasks.where((task) => task.completed).length;
+    final completes = tasks.where((task) => task.complete).length;
     return completes / tasks.length;
   }
 
   String getProgressText(List<Task> tasks) {
-    final completes = tasks.where((task) => task.completed).length;
+    final completes = tasks.where((task) => task.complete).length;
     return '$completes/${tasks.length}';
   }
 

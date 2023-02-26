@@ -1,8 +1,7 @@
-import 'package:cadrninho/src/shared/store/app_store.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import '../shared/stores/app_store.dart';
 
 class ConfigurationPage extends StatefulWidget {
   const ConfigurationPage({super.key});
@@ -20,7 +19,7 @@ class _ConfigurationPageState extends State<ConfigurationPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sigma Notes'),
+        title: const Text('LISTINHA'),
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
@@ -31,49 +30,39 @@ class _ConfigurationPageState extends State<ConfigurationPage> {
               'Configurações',
               style: Theme.of(context).textTheme.titleLarge,
             ),
-            SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 20),
             Text(
               'Tema',
               style: Theme.of(context).textTheme.titleMedium,
             ),
-            SizedBox(
-              height: 10,
-            ),
+            const SizedBox(height: 10),
             RadioListTile<ThemeMode>(
               value: ThemeMode.system,
               groupValue: appStore.themeMode.value,
-              title: Text('Sistema'),
+              title: const Text('Sistema'),
               onChanged: appStore.changeThemeMode,
             ),
             RadioListTile<ThemeMode>(
               value: ThemeMode.light,
               groupValue: appStore.themeMode.value,
-              title: Text('Claro'),
+              title: const Text('Claro'),
               onChanged: appStore.changeThemeMode,
             ),
             RadioListTile<ThemeMode>(
               value: ThemeMode.dark,
               groupValue: appStore.themeMode.value,
-              title: Text('Escuro'),
+              title: const Text('Escuro'),
               onChanged: appStore.changeThemeMode,
             ),
-            SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 20),
             Text(
               'Controle de dados',
               style: Theme.of(context).textTheme.titleMedium,
             ),
-            SizedBox(
-              height: 10,
-            ),
+            const SizedBox(height: 10),
             OutlinedButton(
               onPressed: () {},
-              child: Text(
-                'Apagar cache e reiniciar o app',
-              ),
+              child: const Text('Apagar cache e reiniciar o app'),
             )
           ],
         ),

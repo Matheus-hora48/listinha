@@ -7,7 +7,7 @@ class _Task {
   @PrimaryKey()
   late Uuid id;
   late String description;
-  bool completed = false;
+  bool complete = false;
 }
 
 @RealmModel()
